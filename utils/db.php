@@ -8,7 +8,7 @@ class Db
     private $statement;
     public function __construct($query)
     {
-        $this->pdo = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] .'/wis/utils/is.db');
+        $this->pdo = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] .'/wis-api/utils/is.db');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->beginTransaction();
         $this->statement = $this->pdo->prepare($query);

@@ -34,6 +34,9 @@ try {
                 array_push($response, $value);
             }
         }
+
+        $record = $db->fetchAll();
+        echo json_encode($record);
        
         Http::ReturnSuccess($response);
     } else {

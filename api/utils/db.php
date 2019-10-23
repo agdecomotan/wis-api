@@ -9,7 +9,7 @@ class Db
     public function __construct($query)
     {
         // Load configuration
-        $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/config/config.ini');
+        $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
 
         // Create PDO object and prepare query
         $this->pdo = new PDO('mysql:host=' . $config['db_server'] . ';dbname=' . $config['db_name'], $config['db_user'], $config['db_password']);

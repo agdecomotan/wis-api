@@ -18,6 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 
-$config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/config/config.ini');
+$config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
 $conn = mysqli_connect($config['db_server'],$config['db_user'],$config['db_password'],$config['db_name']);
 echo "Test";

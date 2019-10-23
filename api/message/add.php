@@ -1,8 +1,8 @@
 <?php
 namespace AGD\Wis;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/wis/utils/db.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/wis/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/http.php';
 
 use Exception;
 use PDOException;

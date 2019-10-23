@@ -1,9 +1,9 @@
 <?php
 namespace AGD\Wis;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/utils/db.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/utils/http.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/models/message.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/api/api/models/message.php';
 
 
 use Exception;
@@ -34,9 +34,6 @@ try {
                 array_push($response, $value);
             }
         }
-
-        $record = $db->fetchAll();
-        echo json_encode($record);
        
         Http::ReturnSuccess($response);
     } else {

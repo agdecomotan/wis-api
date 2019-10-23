@@ -8,7 +8,13 @@ class Db
     private $statement;
     public function __construct($query)
     {
-        $this->pdo = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] .'/wis-api/utils/is.db');
+        // Load configuration
+        $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/config/config.ini');
+
+        // Create PDO object and prepare query
+        $this->pdo = new PDO('mysql:host=' . $config['db_server'] . ';dbname=' . $config['db_name'], $config['db_user'], $config['db_password']);
+        //$this->pdo-> = new SQLite3('is.db');
+
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->beginTransaction();
         $this->statement = $this->pdo->prepare($query);

@@ -1,9 +1,9 @@
 <?php
 namespace AGD\Wis;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/db.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/api/api/utils/http.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/api/api/models/product.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/api/utils/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/api/utils/http.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/wis-api/api/api/models/product.php';
 
 
 use Exception;

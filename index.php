@@ -19,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 
 $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
-$conn = mysqli_connect($config['db_server'],$config['db_user'],$config['db_password'],$config['db_name']);
+$conn = mysqli_connect($config['db_server'],$config['db_user'],$config['db_password'],$config['db_name']) or die("Error: Database not available. Please try again later.");
 
-echo $config['db_user'];
-echo $config['db_server'];
-echo "Test";
+
+echo "Connected!";
